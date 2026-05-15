@@ -1,261 +1,108 @@
-# Machine Learning Projects – README
+# Data Science and Analytics Portfolio
 
-## Overview
-
-This repository contains three machine learning projects focused on predictive analytics using Python and Scikit-learn. Each project demonstrates a complete machine learning workflow including:
-
-* Data exploration and preprocessing
-* Feature engineering and encoding
-* Model training and evaluation
-* Data visualization
-* Business insight generation
-
-These projects are suitable for learning supervised machine learning concepts and building practical data science experience.
+A comprehensive collection of data analysis, exploratory data analysis (EDA), and machine learning projects developed during the Data Science & Analytics Internship. This portfolio showcases a robust analytical workflow, emphasizing data preprocessing, predictive modeling, and the extraction of actionable business insights.
 
 ---
 
-# Projects Included
+## 📊 Project Overview
 
-## 1. Customer Churn Prediction (Bank Customers)
+This repository is structured around five distinct analytical tasks. Each task addresses a specific business or statistical problem, utilizing different datasets and requiring tailored machine learning approaches—ranging from simple data visualization to complex classification and regression models.
 
-**File:** `task_3_customer_churn_prediction_(bank_customers).py`
-
-### Objective
-
-Predict whether a bank customer is likely to leave the bank (customer churn prediction).
-
-### Dataset
-
-Churn Modelling Dataset (`Churn_Modelling.csv`)
-
-### Techniques Used
-
-* Data cleaning
-* One-hot encoding
-* Train-test split
-* Random Forest Classification
-* Feature importance analysis
-
-### Key Features
-
-* Geography
-* Gender
-* Age
-* Balance
-* Credit Score
-* Estimated Salary
-* Tenure
-
-### Model Used
-
-* `RandomForestClassifier`
-
-### Evaluation Metrics
-
-* Accuracy Score
-* Classification Report
-* Confusion Matrix
-
-### Key Insights
-
-* Age was one of the strongest churn indicators.
-* Customers with lower engagement and balance patterns showed higher churn probability.
-* Feature importance analysis helped identify business-critical churn drivers.
-
-### Libraries Used
-
-* pandas
-* scikit-learn
-* matplotlib
-* seaborn
+### Key Objectives
+- **Exploratory Data Analysis (EDA):** Uncover underlying patterns, distributions, and anomalies within raw datasets.
+- **Data Engineering & Preprocessing:** Implement robust data cleaning strategies, missing value imputation, and categorical feature encoding.
+- **Predictive Modeling:** Train, evaluate, and optimize regression and classification algorithms to solve specific domain problems.
+- **Insight Generation:** Translate statistical findings and model outputs into actionable intelligence for decision-making.
 
 ---
 
-# 2. Predicting Insurance Claim Amounts
+## 📂 Project Structure and Datasets
 
-**File:** `task_4_predicting_insurance_claim_amounts.py`
+The repository is organized by task, each containing its respective dataset and source code.
 
-### Objective
-
-Predict medical insurance charges based on customer attributes.
-
-### Dataset
-
-Medical Cost Personal Dataset (`insurance.csv`)
-
-### Techniques Used
-
-* Data preprocessing
-* One-hot encoding
-* Linear regression modeling
-* Data visualization
-* Regression evaluation
-
-### Key Features
-
-* Age
-* BMI
-* Smoking status
-* Gender
-* Region
-* Number of children
-
-### Model Used
-
-* `LinearRegression`
-
-### Evaluation Metrics
-
-* Mean Absolute Error (MAE)
-* Root Mean Squared Error (RMSE)
-
-### Visualizations Included
-
-* BMI vs Charges
-* Age vs Charges
-* Smoking Status vs Charges
-
-### Key Insights
-
-* Smoking status had the strongest impact on insurance costs.
-* Higher BMI generally increased medical charges.
-* Older individuals tended to have higher insurance expenses.
-
-### Libraries Used
-
-* pandas
-* scikit-learn
-* matplotlib
-* seaborn
-* numpy
+| Task | Domain | Objective | Dataset | Target Variable |
+|:---|:---|:---|:---|:---|
+| **Task 1** | Data Exploration | Conduct foundational EDA and visualize data distributions. | `iris.csv` | Species Classification |
+| **Task 2** | Financial Risk | Analyze and predict credit risk using applicant financial data. | `train/test.csv` | `Loan_Status` |
+| **Task 3** | Customer Retention | Predict customer churn likelihood in the banking sector. | `Churn_Modelling.csv` | `Exited` (Binary) |
+| **Task 4** | Healthcare | Estimate medical insurance claim amounts based on health factors. | `insurance.csv` | `charges` (Continuous) |
+| **Task 5** | Direct Marketing | Predict personal loan offer acceptance for targeted marketing. | `bank.csv` | `y` (Loan Acceptance) |
 
 ---
 
-# 3. Personal Loan Acceptance Prediction
+## 🛠️ Technologies and Libraries
 
-**File:** `task_5_personal_loan_acceptance_prediction.py`
-
-### Objective
-
-Predict whether customers are likely to accept a personal loan offer.
-
-### Dataset
-
-Bank Marketing Dataset (`bank.csv`)
-
-### Techniques Used
-
-* Exploratory Data Analysis (EDA)
-* One-hot encoding
-* Logistic Regression
-* Decision Tree Classification
-* Customer behavior analysis
-
-### Key Features
-
-* Age
-* Job
-* Marital Status
-* Education
-* Housing Loan
-* Contact Type
-
-### Models Used
-
-* `LogisticRegression`
-* `DecisionTreeClassifier`
-
-### Evaluation Metrics
-
-* Accuracy Score
-* Precision
-* Recall
-* F1-Score
-* Confusion Matrix
-
-### Key Insights
-
-* Loan acceptance prediction suffered from class imbalance.
-* Students and retired customers showed higher acceptance rates.
-* Logistic Regression and Decision Tree models achieved strong overall accuracy but weaker minority-class prediction performance.
-
-### Libraries Used
-
-* pandas
-* scikit-learn
-* matplotlib
-* seaborn
+This project relies on a modern Python data science stack:
+- **Language:** Python 3.x
+- **Data Manipulation:** `pandas`, `numpy`
+- **Data Visualization:** `matplotlib`, `seaborn`
+- **Machine Learning:** `scikit-learn` (Linear Regression, Logistic Regression, Decision Trees, Random Forest, ColumnTransformer)
 
 ---
 
-# Installation
+## 📈 Analysis Workflow & Key Findings
 
-Install required Python libraries before running the scripts:
+### Task 1: Exploratory Data Analysis
+- **Workflow:** Executed foundational data exploration utilizing scatter plots, histograms, and box plots to examine feature distributions and identify potential outliers.
+- **Outcome:** Established a baseline understanding of feature scaling and variance before modeling.
 
+### Task 2: Credit Risk Analysis
+- **Workflow:** Addressed missing data using robust mode and median imputation strategies. Visualized the distributions of critical financial metrics (e.g., loan amounts, applicant income).
+- **Outcome:** Prepared a clean, reliable dataset primed for binary classification of loan default risk.
+
+### Task 3: Bank Customer Churn Prediction
+- **Workflow:** Applied one-hot encoding to categorical variables and trained a **Random Forest Classifier**. Extracted and analyzed feature importances.
+- **Key Insight:** `Age`, `Estimated Salary`, and `Credit Score` were identified as the primary drivers of customer attrition.
+- **Performance:** Achieved an overall accuracy of **86.05%** on the test set.
+
+### Task 4: Medical Insurance Cost Estimation
+- **Workflow:** Engineered features for a **Linear Regression** model to predict continuous medical claim amounts.
+- **Key Insight:** `Smoking status`, `Age`, and `BMI` exhibited a strong positive correlation with medical insurance charges, with smokers systematically incurring significantly higher costs.
+- **Performance:** Evaluated with a Mean Absolute Error (MAE) of **$4,181.19** and RMSE of **$5,796.28**.
+
+### Task 5: Personal Loan Acceptance Prediction
+- **Workflow:** Designed a comprehensive preprocessing pipeline using `ColumnTransformer` to handle mixed data types. Trained both **Logistic Regression** and **Decision Tree** classifiers.
+- **Key Insight:** Demographic segments such as 'students' and 'retirees' demonstrated higher baseline loan acceptance rates. 
+- **Performance:** While the models achieved high overall accuracy (~89.8%), the analysis highlighted the challenge of predicting the minority class (loan acceptance) in a highly imbalanced dataset, emphasizing the need for recall-focused optimization.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+Ensure you have Python 3.x installed. It is recommended to use a virtual environment.
+
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone <repository_url>
+   cd <repository_directory>
+   ```
+2. **Install required dependencies:**
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn
+   ```
+
+### Execution
+Navigate to the respective task directory and execute the Python script or launch the Jupyter Notebook:
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+cd "Task 1"
+python "Task 1 Exploring and Visualizing a Simple Dataset.py"
 ```
 
 ---
 
-# How to Run
+## 🔮 Future Enhancements
 
-Run any project file using Python:
-
-```bash
-python task_3_customer_churn_prediction_(bank_customers).py
-```
-
-```bash
-python task_4_predicting_insurance_claim_amounts.py
-```
-
-```bash
-python task_5_personal_loan_acceptance_prediction.py
-```
+To further refine the predictive capabilities of these models, future iterations will focus on:
+- **Advanced Imbalance Handling:** Implement techniques such as **SMOTE** (Synthetic Minority Over-sampling Technique) or class-weight adjustments to improve recall for minority classes (e.g., in Task 5).
+- **Ensemble Modeling:** Explore advanced gradient boosting frameworks like **XGBoost** or **LightGBM** for improved accuracy.
+- **Hyperparameter Tuning:** Systematically optimize model parameters utilizing `GridSearchCV` or `RandomizedSearchCV`.
 
 ---
 
-# Project Structure
+## 👤 Author
 
-```text
-├── task_3_customer_churn_prediction_(bank_customers).py
-├── task_4_predicting_insurance_claim_amounts.py
-├── task_5_personal_loan_acceptance_prediction.py
-├── Churn_Modelling.csv
-├── insurance.csv
-├── bank.csv
-└── README.md
-```
-
----
-
-# Skills Demonstrated
-
-* Machine Learning Fundamentals
-* Classification and Regression
-* Data Cleaning and Preprocessing
-* Feature Engineering
-* Exploratory Data Analysis (EDA)
-* Model Evaluation
-* Data Visualization
-* Business Insight Extraction
-
----
-
-# Future Improvements
-
-Possible enhancements for these projects include:
-
-* Hyperparameter tuning
-* Cross-validation
-* Handling class imbalance with SMOTE
-* Feature selection optimization
-* Advanced ensemble models (XGBoost, LightGBM)
-* Deployment using Flask or Streamlit
-
----
-
-# Author
-
-Created as part of practical machine learning and data analytics learning projects using Python and Scikit-learn.
+**Haseeb**  
+ https://github.com/haseebkhanmhk10-crypto
+ www.linkedin.com/in/haseebkhan01122
